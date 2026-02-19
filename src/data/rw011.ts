@@ -783,6 +783,65 @@ export const transaksiInfaq: TransaksiInfaq[] = [
   },
 ];
 
+// --- Program & Inovasi ---
+export interface ProgramInovasi {
+  nama: string;
+  slug: string;
+  icon: string;
+  deskripsi: string;
+  fitur: string[];
+  portalUrl: string;
+  foto: string;
+}
+
+export const programInovasi: ProgramInovasi[] = [
+  {
+    nama: "Wifi Warga",
+    slug: "wifi-warga",
+    icon: "fas fa-wifi",
+    deskripsi:
+      "Layanan internet gratis dan terjangkau untuk seluruh warga RW 011. Program ini bertujuan mengurangi kesenjangan digital dan mendukung aktivitas belajar, bekerja, serta berwirausaha dari rumah.",
+    fitur: [
+      "Internet cepat & stabil untuk warga",
+      "Harga terjangkau dengan subsidi RW",
+      "Hotspot tersebar di area publik RW 011",
+      "Dukungan teknis yang responsif untuk warga",
+    ],
+    portalUrl: "#",
+    foto: "/assets/img/program/wifi-warga.jpg",
+  },
+  {
+    nama: "Koperasi",
+    slug: "koperasi",
+    icon: "fas fa-store",
+    deskripsi:
+      "Koperasi warga yang menyediakan kebutuhan pokok dengan harga bersaing, menyediakan jasa, modal usaha / simpan pinjam, serta pemberdayaan ekonomi warga melalui usaha bersama.",
+    fitur: [
+      "Penyediaan sembako harga terjangkau",
+      "Penyediaan jasa, Simpan Pinjam untuk anggota (Coming Soon)",
+      "Program pemberdayaan UMKM warga",
+      "Bagi hasil keuntungan untuk anggota",
+    ],
+    portalUrl: "#",
+    foto: "/assets/img/program/koperasi.jpg",
+  },
+  {
+    nama: "Sidigi RT",
+    slug: "sidigi-rt",
+    icon: "fas fa-laptop-code",
+    deskripsi:
+      "Sistem Digitalisasi RT — platform digital untuk mempermudah administrasi dan pelayanan di tingkat RT. Warga bisa mengurus surat, lapor kegiatan, dan akses informasi RT secara online.",
+    fitur: [
+      "Pengajuan surat pengantar online",
+      "Data warga digital per RT",
+      "Laporan kegiatan & keuangan RT",
+      "Notifikasi informasi penting via WhatsApp",
+    ],
+    portalUrl: "#",
+    foto: "/assets/img/program/sidigi-rt.jpg",
+  },
+];
+
 // --- Navigasi ---
 export interface NavItem {
   label: string;
@@ -815,6 +874,7 @@ export const navMenu: NavItem[] = [
     label: "Layanan",
     href: "#",
     children: [
+      { label: "Program & Inovasi", href: "/program" },
       { label: "Dokumen Publik", href: "/dokumen" },
       { label: "Infaq Online", href: "/infaq" },
       { label: "Transparansi Infaq", href: "/transparansi-infaq" },

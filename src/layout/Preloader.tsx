@@ -34,7 +34,7 @@ const Preloader = () => {
       <div className="animation-preloader">
         <div className="spinner"></div>
         <div className="txt-loading">
-          {["D", "A", "N", "B", "O", "X"].map((letter, index) => (
+          {["R", "W", " ", "0", "1", "1"].map((letter, index) => (
             <span
               key={index}
               data-text-preloader={letter}
