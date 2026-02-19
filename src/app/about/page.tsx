@@ -3,10 +3,10 @@ import {
   VisiMisiSection,
   ProfilWilayahPreview,
 } from "@/components/About";
-import { CounterSection1 } from "@/components/CounterSection";
+import { CounterSection } from "@/components/CounterSection";
 import { Gallery1 } from "@/components/Gallery";
 import PageBanner from "@/components/PageBanner";
-import { Team2 } from "@/components/Team";
+import { Team } from "@/components/Team";
 import DanboxLayout from "@layout/DanboxLayout";
 
 const AboutPage = () => {
@@ -15,9 +15,9 @@ const AboutPage = () => {
       <PageBanner pageName="Tentang Kami" />
       <SejarahSection />
       <VisiMisiSection />
-      <CounterSection1 />
+      <CounterSection />
       <ProfilWilayahPreview />
-      <Team2 />
+      <Team />
       <Gallery1 />
     </DanboxLayout>
   );

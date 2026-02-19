@@ -1,10 +1,25 @@
 import { pengurusRW } from "@/data/rw011";
 import PageBanner from "@/components/PageBanner";
 import DanboxLayout from "@layout/DanboxLayout";
-import Image from "next/image";
+
+const avatarColors = [
+  "#2563eb", "#7c3aed", "#db2777", "#ea580c", "#16a34a",
+  "#0891b2", "#4f46e5", "#c026d3", "#d97706", "#059669",
+];
+
+function getInitials(nama: string) {
+  return nama
+    .split(" ")
+    .filter((w) => !["H.", "Hj."].includes(w))
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join("")
+    .toUpperCase();
+}
 
 const TeamDetailsPage = () => {
   const pengurus = pengurusRW[0]; // Default: Ketua RW
+  const color = avatarColors[0];
 
   return (
     <DanboxLayout>
@@ -13,19 +28,27 @@ const TeamDetailsPage = () => {
         <div className="container">
           <div className="team-details-wrapper">
             <div className="row g-4 align-items-center">
-              <div className="col-lg-5">
-                <div className="team-details-image">
-                  <Image
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ height: "auto", width: "100%" }}
-                    src={pengurus.foto}
-                    alt={pengurus.nama}
-                  />
+              <div className="col-lg-4 text-center">
+                <div
+                  style={{
+                    width: 200,
+                    height: 200,
+                    borderRadius: "50%",
+                    background: color,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    margin: "0 auto",
+                    fontSize: 72,
+                    fontWeight: 700,
+                    color: "#fff",
+                    letterSpacing: 3,
+                  }}
+                >
+                  {getInitials(pengurus.nama)}
                 </div>
               </div>
-              <div className="col-lg-7">
+              <div className="col-lg-8">
                 <div className="team-details-content">
                   <div className="details-info">
                     <h3>{pengurus.nama}</h3>
@@ -45,16 +68,12 @@ const TeamDetailsPage = () => {
                           <td>{pengurus.jabatan}</td>
                         </tr>
                         <tr>
-                          <th>Periode</th>
-                          <td>{pengurus.periode}</td>
+                          <th>Bidang</th>
+                          <td>{pengurus.bidang}</td>
                         </tr>
                         <tr>
-                          <th>Kategori</th>
-                          <td>
-                            {pengurus.kategori === "rw"
-                              ? "Pengurus Inti RW"
-                              : `Ketua RT ${pengurus.nomorRT}`}
-                          </td>
+                          <th>Periode</th>
+                          <td>{pengurus.periode}</td>
                         </tr>
                       </tbody>
                     </table>

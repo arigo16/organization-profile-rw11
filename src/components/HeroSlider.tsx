@@ -23,7 +23,7 @@ export const HeroSlider1 = () => {
                         data-delay="1.3s"
                         className="mb-2"
                       >
-                        <i className="fas fa-mosque" /> {slide.tagline}
+                        <i className="fas fa-house-chimney" /> {slide.tagline}
                       </h5>
                       <h1
                         data-animation="fadeInUp"

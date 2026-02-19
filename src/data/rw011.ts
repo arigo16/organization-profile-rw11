@@ -17,7 +17,7 @@ export const orgInfo = {
   whatsapp: "6281234567890",
   email: "rw011sukamantri@gmail.com",
   googleMapsEmbed:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.0!2d106.57!3d-6.17!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTAnMTIuMCJTIDEwNsKwMzQnMTIuMCJF!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d349.6062493641003!2d106.5518995125581!3d-6.159831221360605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ff0041586bf5%3A0x38d05456db9e25af!2sGSG%20RW011!5e0!3m2!1sid!2sid!4v1771488692468!5m2!1sid!2sidhttps://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1989.1311142818213!2d106.55201028934435!3d-6.159185950086078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ff0041586bf5%3A0x38d05456db9e25af!2sGSG%20RW011!5e0!3m2!1sid!2sid!4v1771488767228!5m2!1sid!2sid",
   socialMedia: {
     facebook: "https://facebook.com/rw011sukamantri",
     instagram: "https://instagram.com/rw011sukamantri",
@@ -27,10 +27,7 @@ export const orgInfo = {
 
 // --- Tentang RW ---
 export const tentangRW = {
-  sejarah: `RW 011 Desa Sukamantri terletak di Kecamatan Pasar Kemis, Kabupaten Tangerang, Provinsi Banten.
-Wilayah RW 011 merupakan kawasan pemukiman yang terus berkembang dengan semangat gotong royong dan kebersamaan antar warga.
-Sejak terbentuk, RW 011 telah aktif dalam berbagai kegiatan pembangunan lingkungan, keagamaan, dan sosial kemasyarakatan
-demi terciptanya lingkungan yang aman, nyaman, bersih, dan sejahtera.`,
+  about: `RW 011 merupakan salah satu rukun warga di Desa Sukamantri, Kecamatan Pasar Kemis, Kabupaten Tangerang, Provinsi Banten. Wilayah RW 011 terdiri dari 11 RT yang mencakup beberapa klaster perumahan, antara lain Taman Merpati PuriJaya, Puri Kasuari, Puri Cendrawasih, dan Puri Pelican.`,
   visi: "Mewujudkan lingkungan RW 011 yang aman, nyaman, bersih, tertib, dan sejahtera berlandaskan semangat gotong royong.",
   misi: [
     "Meningkatkan keamanan dan ketertiban lingkungan melalui sistem keamanan lingkungan (Siskamling)",
@@ -72,290 +69,91 @@ export const heroSlides = [
 
 // --- Statistik ---
 export const statistik = {
-  totalRT: 8,
+  totalRT: 11,
   totalKK: 420,
-  totalWarga: 1680,
+  totalWarga: 1500,
 };
 
 // --- Pengurus RW ---
 export interface Pengurus {
   nama: string;
   jabatan: string;
-  foto: string;
+  bidang: string;
   periode: string;
-  kategori: "rw" | "rt";
-  nomorRT?: string;
 }
 
-export const pengurusRW: Pengurus[] = [
-  // Pengurus Inti RW
-  {
-    nama: "H. Ahmad Sudrajat",
-    jabatan: "Ketua RW",
-    foto: "/assets/img/team/team-1.jpg",
-    periode: "2024–2029",
-    kategori: "rw",
-  },
-  {
-    nama: "Budi Santoso",
-    jabatan: "Wakil Ketua RW",
-    foto: "/assets/img/team/team-2.jpg",
-    periode: "2024–2029",
-    kategori: "rw",
-  },
-  {
-    nama: "Siti Aminah",
-    jabatan: "Sekretaris RW",
-    foto: "/assets/img/team/team-3.jpg",
-    periode: "2024–2029",
-    kategori: "rw",
-  },
-  {
-    nama: "Hj. Dewi Rahayu",
-    jabatan: "Bendahara RW",
-    foto: "/assets/img/team/team-4.jpg",
-    periode: "2024–2029",
-    kategori: "rw",
-  },
-  {
-    nama: "Agus Setiawan",
-    jabatan: "Seksi Keamanan",
-    foto: "/assets/img/team/team-5.jpg",
-    periode: "2024–2029",
-    kategori: "rw",
-  },
-  {
-    nama: "Rina Marlina",
-    jabatan: "Seksi Kebersihan",
-    foto: "/assets/img/team/team-6.jpg",
-    periode: "2024–2029",
-    kategori: "rw",
-  },
-  // Ketua RT
-  {
-    nama: "Joko Widodo",
-    jabatan: "Ketua RT 001",
-    foto: "/assets/img/team/team-7.jpg",
-    periode: "2024–2029",
-    kategori: "rt",
-    nomorRT: "001",
-  },
-  {
-    nama: "Dedi Mulyadi",
-    jabatan: "Ketua RT 002",
-    foto: "/assets/img/team/team-8.jpg",
-    periode: "2024–2029",
-    kategori: "rt",
-    nomorRT: "002",
-  },
-  {
-    nama: "Eko Prasetyo",
-    jabatan: "Ketua RT 003",
-    foto: "/assets/img/team/team-9.jpg",
-    periode: "2024–2029",
-    kategori: "rt",
-    nomorRT: "003",
-  },
-  {
-    nama: "Hendra Gunawan",
-    jabatan: "Ketua RT 004",
-    foto: "/assets/img/team/team-10.jpg",
-    periode: "2024–2029",
-    kategori: "rt",
-    nomorRT: "004",
-  },
-  {
-    nama: "Yusuf Hakim",
-    jabatan: "Ketua RT 005",
-    foto: "/assets/img/team/team-11.jpg",
-    periode: "2024–2029",
-    kategori: "rt",
-    nomorRT: "005",
-  },
-  {
-    nama: "Asep Sunandar",
-    jabatan: "Ketua RT 006",
-    foto: "/assets/img/team/team-12.jpg",
-    periode: "2024–2029",
-    kategori: "rt",
-    nomorRT: "006",
-  },
-  {
-    nama: "Rudi Hartono",
-    jabatan: "Ketua RT 007",
-    foto: "/assets/img/team/team-13.jpg",
-    periode: "2024–2029",
-    kategori: "rt",
-    nomorRT: "007",
-  },
-  {
-    nama: "Wawan Hermawan",
-    jabatan: "Ketua RT 008",
-    foto: "/assets/img/team/team-14.jpg",
-    periode: "2024–2029",
-    kategori: "rt",
-    nomorRT: "008",
-  },
+export const bidangOrder = [
+  "Pengurus Inti",
+  "Kasepuhan & Kerukunan Masyarakat",
+  "Pemberdayaan Sumber Daya, Ekonomi & Informasi Teknologi",
+  "Hubungan Masyarakat",
+  "Keamanan & Ketertiban Masyarakat",
+  "Kepemudaan & Olahraga",
+  "Utilitas & Aset",
+  "Ketua RT",
 ];
 
-// --- Data RT & Warga ---
-export interface DataWarga {
-  nama: string;
-}
+export const pengurusRW: Pengurus[] = [
+  // Pengurus Inti
+  { nama: "Sungkono", jabatan: "Ketua RW", bidang: "Pengurus Inti", periode: "2024–2029" },
+  { nama: "Ferly Noviandri, ST", jabatan: "Sekretaris", bidang: "Pengurus Inti", periode: "2024–2029" },
+  { nama: "Dewanda Reza Remaldi", jabatan: "Sekretaris", bidang: "Pengurus Inti", periode: "2024–2029" },
+  { nama: "Komarudin, S.Kom.", jabatan: "Bendahara", bidang: "Pengurus Inti", periode: "2024–2029" },
+  // Kasepuhan & Kerukunan Masyarakat
+  { nama: "Nurkolis, S.T", jabatan: "Kasepuhan & Kerukunan Masyarakat", bidang: "Kasepuhan & Kerukunan Masyarakat", periode: "2024–2029" },
+  { nama: "Prastyoko", jabatan: "Kasepuhan & Kerukunan Masyarakat", bidang: "Kasepuhan & Kerukunan Masyarakat", periode: "2024–2029" },
+  // Pemberdayaan Sumber Daya, Ekonomi & Informasi Teknologi
+  { nama: "Dany Hermawan, S.T.", jabatan: "Pemberdayaan SDaya, Ekonomi & IT", bidang: "Pemberdayaan Sumber Daya, Ekonomi & Informasi Teknologi", periode: "2024–2029" },
+  { nama: "Adi Setiawan, S.Kom", jabatan: "Pemberdayaan SDaya, Ekonomi & IT", bidang: "Pemberdayaan Sumber Daya, Ekonomi & Informasi Teknologi", periode: "2024–2029" },
+  { nama: "Arigo, S.Kom., M.TI", jabatan: "Pemberdayaan SDaya, Ekonomi & IT", bidang: "Pemberdayaan Sumber Daya, Ekonomi & Informasi Teknologi", periode: "2024–2029" },
+  // Hubungan Masyarakat
+  { nama: "Yansah", jabatan: "Hubungan Masyarakat", bidang: "Hubungan Masyarakat", periode: "2024–2029" },
+  { nama: "Ryan Ristianto", jabatan: "Hubungan Masyarakat", bidang: "Hubungan Masyarakat", periode: "2024–2029" },
+  { nama: "Joko Sulistiyono", jabatan: "Hubungan Masyarakat", bidang: "Hubungan Masyarakat", periode: "2024–2029" },
+  // Keamanan & Ketertiban Masyarakat
+  { nama: "Tugimanto", jabatan: "Keamanan & Ketertiban Masyarakat", bidang: "Keamanan & Ketertiban Masyarakat", periode: "2024–2029" },
+  { nama: "Sutahar", jabatan: "Keamanan & Ketertiban Masyarakat", bidang: "Keamanan & Ketertiban Masyarakat", periode: "2024–2029" },
+  { nama: "Pendi Sugara", jabatan: "Keamanan & Ketertiban Masyarakat", bidang: "Keamanan & Ketertiban Masyarakat", periode: "2024–2029" },
+  // Kepemudaan & Olahraga
+  { nama: "Dimas Sidiq Adhi Saputro, S.Par.", jabatan: "Kepemudaan & Olahraga", bidang: "Kepemudaan & Olahraga", periode: "2024–2029" },
+  { nama: "Zenal Mustopa", jabatan: "Kepemudaan & Olahraga", bidang: "Kepemudaan & Olahraga", periode: "2024–2029" },
+  { nama: "Edy Siswanto", jabatan: "Kepemudaan & Olahraga", bidang: "Kepemudaan & Olahraga", periode: "2024–2029" },
+  // Utilitas & Aset
+  { nama: "Irwan", jabatan: "Utilitas & Aset", bidang: "Utilitas & Aset", periode: "2024–2029" },
+  { nama: "Mario", jabatan: "Utilitas & Aset", bidang: "Utilitas & Aset", periode: "2024–2029" },
+  { nama: "Supri", jabatan: "Utilitas & Aset", bidang: "Utilitas & Aset", periode: "2024–2029" },
+  // Ketua RT
+  { nama: "Abu Kahar", jabatan: "Ketua RT 01", bidang: "Ketua RT", periode: "2024–2029" },
+  { nama: "M. Martin", jabatan: "Ketua RT 02", bidang: "Ketua RT", periode: "2024–2029" },
+  { nama: "Dadang Suryana", jabatan: "Ketua RT 03", bidang: "Ketua RT", periode: "2024–2029" },
+  { nama: "Hamdan", jabatan: "Ketua RT 04", bidang: "Ketua RT", periode: "2024–2029" },
+  { nama: "Basuki", jabatan: "Ketua RT 05", bidang: "Ketua RT", periode: "2024–2029" },
+  { nama: "Rihat Immadudin", jabatan: "Ketua RT 06", bidang: "Ketua RT", periode: "2024–2029" },
+  { nama: "Edi Eko Purwoko", jabatan: "Ketua RT 07", bidang: "Ketua RT", periode: "2024–2029" },
+  { nama: "Sri Haryanto", jabatan: "Ketua RT 08", bidang: "Ketua RT", periode: "2024–2029" },
+  { nama: "Hernando Buana", jabatan: "Ketua RT 09", bidang: "Ketua RT", periode: "2024–2029" },
+  { nama: "Dodi Wibowo", jabatan: "Ketua RT 10", bidang: "Ketua RT", periode: "2024–2029" },
+  { nama: "Widiyantoro", jabatan: "Ketua RT 11", bidang: "Ketua RT", periode: "2024–2029" },
+];
 
+// --- Data RT ---
 export interface RTData {
   nomorRT: string;
   ketuaRT: string;
-  totalKK: number;
-  totalWarga: number;
-  warga: DataWarga[];
 }
 
 export const dataRT: RTData[] = [
-  {
-    nomorRT: "001",
-    ketuaRT: "Joko Widodo",
-    totalKK: 55,
-    totalWarga: 220,
-    warga: [
-      { nama: "Ahmad Fauzi" },
-      { nama: "Bambang Irawan" },
-      { nama: "Cahyo Nugroho" },
-      { nama: "Darmawan Putra" },
-      { nama: "Edi Suryanto" },
-      { nama: "Fajar Hidayat" },
-      { nama: "Gunawan Wibisono" },
-      { nama: "Hasan Abdullah" },
-      { nama: "Irfan Maulana" },
-      { nama: "Kurniawan Saputra" },
-    ],
-  },
-  {
-    nomorRT: "002",
-    ketuaRT: "Dedi Mulyadi",
-    totalKK: 52,
-    totalWarga: 208,
-    warga: [
-      { nama: "Lukman Hakim" },
-      { nama: "Mulyono Hadi" },
-      { nama: "Nandang Permana" },
-      { nama: "Oding Supriadi" },
-      { nama: "Purnomo Sidi" },
-      { nama: "Ridwan Kamil" },
-      { nama: "Surya Atmaja" },
-      { nama: "Taufik Rahman" },
-      { nama: "Ujang Suherman" },
-      { nama: "Vino Bastian" },
-    ],
-  },
-  {
-    nomorRT: "003",
-    ketuaRT: "Eko Prasetyo",
-    totalKK: 50,
-    totalWarga: 200,
-    warga: [
-      { nama: "Wahyu Pratama" },
-      { nama: "Xaverius Ananda" },
-      { nama: "Yanto Sugiarto" },
-      { nama: "Zainal Abidin" },
-      { nama: "Abdul Rohim" },
-      { nama: "Bagus Firmansyah" },
-      { nama: "Candra Wijaya" },
-      { nama: "Dimas Ardianto" },
-      { nama: "Erwin Saputra" },
-      { nama: "Firman Syah" },
-    ],
-  },
-  {
-    nomorRT: "004",
-    ketuaRT: "Hendra Gunawan",
-    totalKK: 53,
-    totalWarga: 212,
-    warga: [
-      { nama: "Galih Prakoso" },
-      { nama: "Hadi Wibowo" },
-      { nama: "Ibrahim Malik" },
-      { nama: "Jajang Nurjaman" },
-      { nama: "Karman Suhendi" },
-      { nama: "Lutfi Hamdani" },
-      { nama: "Maman Suparman" },
-      { nama: "Nanang Kosasih" },
-      { nama: "Oman Abdurahman" },
-      { nama: "Pepen Supendi" },
-    ],
-  },
-  {
-    nomorRT: "005",
-    ketuaRT: "Yusuf Hakim",
-    totalKK: 54,
-    totalWarga: 216,
-    warga: [
-      { nama: "Rahmat Hidayat" },
-      { nama: "Soleh Iskandar" },
-      { nama: "Tatang Sutarna" },
-      { nama: "Udin Syarifudin" },
-      { nama: "Vicky Prasetyo" },
-      { nama: "Wandi Kuswandi" },
-      { nama: "Yudi Hermawan" },
-      { nama: "Zaenal Mutaqin" },
-      { nama: "Asep Saepudin" },
-      { nama: "Beni Irawan" },
-    ],
-  },
-  {
-    nomorRT: "006",
-    ketuaRT: "Asep Sunandar",
-    totalKK: 51,
-    totalWarga: 204,
-    warga: [
-      { nama: "Cecep Hidayat" },
-      { nama: "Dadan Hermawan" },
-      { nama: "Endang Supriatna" },
-      { nama: "Firdaus Ansori" },
-      { nama: "Gani Mulyadi" },
-      { nama: "Hamdan Haris" },
-      { nama: "Iwan Setiawan" },
-      { nama: "Junaedi Rahmat" },
-      { nama: "Komarudin Saeful" },
-      { nama: "Lili Suherli" },
-    ],
-  },
-  {
-    nomorRT: "007",
-    ketuaRT: "Rudi Hartono",
-    totalKK: 53,
-    totalWarga: 212,
-    warga: [
-      { nama: "Mamat Rahmat" },
-      { nama: "Nana Suryana" },
-      { nama: "Otong Suherlan" },
-      { nama: "Parman Suparman" },
-      { nama: "Roni Permadi" },
-      { nama: "Slamet Riyadi" },
-      { nama: "Tarjo Supardi" },
-      { nama: "Umar Faruq" },
-      { nama: "Wawan Darmawan" },
-      { nama: "Yaya Sunarya" },
-    ],
-  },
-  {
-    nomorRT: "008",
-    ketuaRT: "Wawan Hermawan",
-    totalKK: 52,
-    totalWarga: 208,
-    warga: [
-      { nama: "Zarkasih Muttaqin" },
-      { nama: "Agung Prabowo" },
-      { nama: "Basuki Rahmat" },
-      { nama: "Chairul Anwar" },
-      { nama: "Dodi Iskandar" },
-      { nama: "Eka Saputra" },
-      { nama: "Faisal Akbar" },
-      { nama: "Gilang Ramadhan" },
-      { nama: "Hikmat Nugraha" },
-      { nama: "Indra Lesmana" },
-    ],
-  },
+  { nomorRT: "01", ketuaRT: "Abu Kahar" },
+  { nomorRT: "02", ketuaRT: "M. Martin" },
+  { nomorRT: "03", ketuaRT: "Dadang Suryana" },
+  { nomorRT: "04", ketuaRT: "Hamdan" },
+  { nomorRT: "05", ketuaRT: "Basuki" },
+  { nomorRT: "06", ketuaRT: "Rihat Immadudin" },
+  { nomorRT: "07", ketuaRT: "Edi Eko Purwoko" },
+  { nomorRT: "08", ketuaRT: "Sri Haryanto" },
+  { nomorRT: "09", ketuaRT: "Hernando Buana" },
+  { nomorRT: "10", ketuaRT: "Dodi Wibowo" },
+  { nomorRT: "11", ketuaRT: "Widiyantoro" },
 ];
 
 // --- Daftar Aset ---

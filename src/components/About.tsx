@@ -1,6 +1,6 @@
 import { tentangRW } from "@/data/rw011";
 import Image from "next/image";
-import Link from "next/link";
+
 
 export const SambutanSection = () => {
   return (
@@ -18,7 +18,7 @@ export const SambutanSection = () => {
                         height={0}
                         sizes="100vw"
                         style={{ width: "100%", height: "100%" }}
-                        src="/assets/img/about/08.jpg"
+                        src="/assets/img/people/ketua-rw.jpeg"
                         alt="Lingkungan RW 011"
                       />
                     </div>
@@ -26,9 +26,9 @@ export const SambutanSection = () => {
                   <div className="col-lg-5 wow fadeInUp" data-wow-delay=".5s">
                     <div className="about-experience">
                       <h2>
-                        <span className="count">RW</span>
+                        <span className="count">RW 011</span>
                       </h2>
-                      <h6>011 Desa Sukamantri</h6>
+                      <h6>Desa Sukamantri</h6>
                     </div>
                     <div className="about-img">
                       <Image
@@ -36,7 +36,7 @@ export const SambutanSection = () => {
                         height={0}
                         sizes="100vw"
                         style={{ width: "100%", height: "auto" }}
-                        src="/assets/img/about/09.jpg"
+                        src="/assets/img/logo-square-bg-white.jpeg"
                         alt="Kegiatan warga RW 011"
                       />
                     </div>
@@ -48,7 +48,7 @@ export const SambutanSection = () => {
               <div className="about-content">
                 <div className="section-title">
                   <span className="sub-title color-2 wow fadeInUp">
-                    <i className="fas fa-mosque" />
+                    <i className="fas fa-user-crown" />
                     Sambutan Ketua RW
                   </span>
                   <h2 className="mt-char-animation">
@@ -56,39 +56,11 @@ export const SambutanSection = () => {
                   </h2>
                 </div>
                 <p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
-                  {tentangRW.sambutanKetuaRW.split("\n\n")[0]}
+                  Selamat datang di portal resmi RW 011 Desa Sukamantri. Portal ini hadir sebagai sarana informasi dan komunikasi antara pengurus RW dengan seluruh warga. Mari bersama-sama kita wujudkan lingkungan yang aman, nyaman, bersih, dan sejahtera.
                 </p>
-                <div className="d-flex align-items-center flex-wrap mb-5">
-                  <ul
-                    className="checked-list wow fadeInUp"
-                    data-wow-delay=".3s"
-                  >
-                    <li>
-                      <i className="far fa-check" /> Gotong royong & kebersamaan
-                    </li>
-                    <li>
-                      <i className="far fa-check" /> Keamanan lingkungan terjaga
-                    </li>
-                  </ul>
-                  <ul
-                    className="checked-list wow fadeInUp"
-                    data-wow-delay=".5s"
-                  >
-                    <li>
-                      <i className="far fa-check" /> Kebersihan bersama
-                    </li>
-                    <li>
-                      <i className="far fa-check" /> Transparansi keuangan
-                    </li>
-                  </ul>
-                </div>
-                <Link
-                  href="/about"
-                  className="theme-btn wow fadeInUp"
-                  data-wow-delay=".7s"
-                >
-                  Selengkapnya
-                </Link>
+                <p className="wow fadeInUp" data-wow-delay=".7s">
+                  Melalui semangat gotong royong dan kebersamaan, kami berkomitmen untuk terus membangun lingkungan yang lebih baik bagi seluruh warga RW 011. Terima kasih atas partisipasi dan dukungannya.
+                </p>
               </div>
             </div>
           </div>
@@ -114,7 +86,7 @@ export const SejarahSection = () => {
                         height={0}
                         sizes="100vw"
                         style={{ width: "100%", height: "100%" }}
-                        src="/assets/img/about/08.jpg"
+                        src="/assets/img/people/ketua-rw.jpeg"
                         alt="Sejarah RW 011"
                       />
                     </div>
@@ -126,7 +98,7 @@ export const SejarahSection = () => {
                         height={0}
                         sizes="100vw"
                         style={{ width: "100%", height: "auto" }}
-                        src="/assets/img/about/09.jpg"
+                        src="/assets/img/logo-square-bg-white.jpeg"
                         alt="Warga RW 011"
                       />
                     </div>
@@ -142,11 +114,11 @@ export const SejarahSection = () => {
                     Tentang Kami
                   </span>
                   <h2 className="mt-char-animation">
-                    Sejarah <span>RW 011</span> Desa Sukamantri
+                    Tentang <span>RW 011</span> Desa Sukamantri
                   </h2>
                 </div>
                 <p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
-                  {tentangRW.sejarah}
+                  {tentangRW.about}
                 </p>
                 <div className="d-flex align-items-center flex-wrap mb-5">
                   <ul
@@ -154,21 +126,22 @@ export const SejarahSection = () => {
                     data-wow-delay=".3s"
                   >
                     <li>
-                      <i className="far fa-check" /> Kecamatan Pasar Kemis
+                      <i className="far fa-check" /> 11 Rukun Tetangga
                     </li>
                     <li>
-                      <i className="far fa-check" /> Kabupaten Tangerang
+                      <i className="far fa-check" /> Kecamatan Pasar Kemis
                     </li>
+
                   </ul>
                   <ul
                     className="checked-list wow fadeInUp"
                     data-wow-delay=".5s"
                   >
                     <li>
-                      <i className="far fa-check" /> Provinsi Banten
+                      <i className="far fa-check" /> Kabupaten Tangerang
                     </li>
                     <li>
-                      <i className="far fa-check" /> 8 Rukun Tetangga
+                      <i className="far fa-check" /> Provinsi Banten
                     </li>
                   </ul>
                 </div>
@@ -232,7 +205,7 @@ export const ProfilWilayahPreview = () => {
     { img: "/assets/img/about/07.jpg", delay: ".7s" },
   ];
   return (
-    <section className="about-section-2 fix">
+    <section className="about-section-2 fix" style={{ marginTop: '60px' }}>
       <div className="container">
         <div className="section-title text-center">
           <span className="sub-title color-2 wow fadeInUp">

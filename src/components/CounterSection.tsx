@@ -1,7 +1,7 @@
 import { statistik } from "@/data/rw011";
 import Counter from "./Counter";
 
-export const CounterSection1 = () => {
+export const CounterSection = () => {
   const counterData = [
     {
       icon: "fas fa-home",

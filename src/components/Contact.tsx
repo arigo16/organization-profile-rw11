@@ -1,6 +1,6 @@
 import { orgInfo } from "@/data/rw011";
 
-export const Contact1 = () => {
+export const Contact = () => {
   return (
     <section className="contact-section fix section-padding">
       <div className="container">
@@ -39,19 +39,6 @@ export const Contact1 = () => {
                         <div className="form-clt">
                           <input
                             type="text"
-                            name="email"
-                            id="email"
-                            placeholder="Alamat Email"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        className="col-lg-6 wow fadeInUp"
-                        data-wow-delay=".6"
-                      >
-                        <div className="form-clt">
-                          <input
-                            type="text"
                             name="phone"
                             id="phone"
                             placeholder="Nomor HP / WhatsApp"
@@ -59,29 +46,8 @@ export const Contact1 = () => {
                         </div>
                       </div>
                       <div
-                        className="col-lg-6 wow fadeInUp"
-                        data-wow-delay=".7"
-                      >
-                        <div className="form-clt">
-                          <div className="nice-select" tabIndex={0}>
-                            <span className="current">Perihal</span>
-                            <ul className="list">
-                              <li data-value={1} className="option selected">
-                                Umum
-                              </li>
-                              <li data-value={2} className="option">
-                                Administrasi
-                              </li>
-                              <li data-value={3} className="option">
-                                Infaq
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div
                         className="col-lg-12 wow fadeInUp"
-                        data-wow-delay=".8"
+                        data-wow-delay=".6"
                       >
                         <div className="form-clt-big form-clt">
                           <textarea
@@ -94,7 +60,7 @@ export const Contact1 = () => {
                       </div>
                       <div
                         className="col-lg-6 wow fadeInUp"
-                        data-wow-delay=".9"
+                        data-wow-delay=".7"
                       >
                         <button type="submit" className="theme-btn">
                           Kirim Pesan <i className="far fa-long-arrow-right" />
