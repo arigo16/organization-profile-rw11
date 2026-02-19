@@ -42,10 +42,13 @@ export function useScrollTop(): void {
 
 export function scrollAnimation() {
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      require("wowjs");
+    if (typeof window === "undefined") return;
+    import("wowjs").then(() => {
       // @ts-ignore
-      new window.WOW().init();
-    }
+      if (window.WOW) {
+        // @ts-ignore
+        new window.WOW({ live: false }).init();
+      }
+    });
   }, []);
 }
