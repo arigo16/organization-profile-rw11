@@ -87,10 +87,10 @@ const Header1 = ({ open }: { open: () => void }) => (
               <Nav />
             </div>
             <div className="header-button d-none d-sm-block">
-              <Link href="/infaq" className="theme-btn">
-                Infaq Online
-                <i className="ps-2 fas fa-hand-holding-heart" />
-              </Link>
+              <a href="https://koperasipurikarya.id" className="theme-btn" target="_blank" rel="noopener noreferrer">
+                Koperasi Puri Karya
+                <i className="ps-2 fas fa-store" />
+              </a>
             </div>
             <div className="header__hamburger d-xl-none my-auto">
               <div className="sidebar__toggle" onClick={open}>
@@ -159,10 +159,10 @@ const Header3 = ({ open }: { open: () => void }) => {
                     <i className="fa-light fa-magnifying-glass"></i>
                   </a>
                   <div className="header-button">
-                    <Link href="/infaq" className="theme-btn">
-                      Infaq Online
-                      <i className="ps-2 fas fa-hand-holding-heart" />
-                    </Link>
+                    <a href="https://koperasipurikarya.id" className="theme-btn" target="_blank" rel="noopener noreferrer">
+                      Koperasi Puri Karya
+                      <i className="ps-2 fas fa-store" />
+                    </a>
                   </div>
                   <div className="header__hamburger d-xl-none my-auto">
                     <div className="sidebar__toggle" onClick={open}>
@@ -179,21 +179,33 @@ const Header3 = ({ open }: { open: () => void }) => {
   );
 };
 
+const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
+  const isExternal = href.startsWith("http");
+  if (isExternal) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer">
+        {children}
+      </a>
+    );
+  }
+  return <Link href={href}>{children}</Link>;
+};
+
 const Nav = () => (
   <div className="main-menu d-none d-xl-block">
     <nav id="mobile-menu">
       <ul>
         {navMenu.map((item, i) => (
           <li key={i} className={item.children ? "has-dropdown" : ""}>
-            <Link href={item.href}>
+            <NavLink href={item.href}>
               {item.label}
               {item.children && <i className="fas fa-angle-down" />}
-            </Link>
+            </NavLink>
             {item.children && (
               <ul className="submenu">
                 {item.children.map((child, j) => (
                   <li key={j}>
-                    <Link href={child.href}>{child.label}</Link>
+                    <NavLink href={child.href}>{child.label}</NavLink>
                   </li>
                 ))}
               </ul>
@@ -327,21 +339,21 @@ const MobileNavItem = ({
   if (!item.children) {
     return (
       <li>
-        <Link href={item.href}>{item.label}</Link>
+        <NavLink href={item.href}>{item.label}</NavLink>
       </li>
     );
   }
 
   return (
     <li className="has-dropdown">
-      <Link href={item.href}>
+      <NavLink href={item.href}>
         {item.label}
         <i className="fas fa-angle-down" />
-      </Link>
+      </NavLink>
       <ul className="submenu" style={show(item.label, activeMenu)}>
         {item.children.map((child, j) => (
           <li key={j}>
-            <Link href={child.href}>{child.label}</Link>
+            <NavLink href={child.href}>{child.label}</NavLink>
           </li>
         ))}
       </ul>

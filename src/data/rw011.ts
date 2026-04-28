@@ -70,7 +70,7 @@ export const heroSlides = [
 // --- Statistik ---
 export const statistik = {
   totalRT: 11,
-  totalKK: 420,
+  totalKK: 1370,
   totalWarga: 1500,
 };
 
@@ -594,22 +594,7 @@ export interface ProgramInovasi {
 
 export const programInovasi: ProgramInovasi[] = [
   {
-    nama: "Wifi Warga",
-    slug: "wifi-warga",
-    icon: "fas fa-wifi",
-    deskripsi:
-      "Layanan internet gratis dan terjangkau untuk seluruh warga RW 011. Program ini bertujuan mengurangi kesenjangan digital dan mendukung aktivitas belajar, bekerja, serta berwirausaha dari rumah.",
-    fitur: [
-      "Internet cepat & stabil untuk warga",
-      "Harga terjangkau dengan subsidi RW",
-      "Hotspot tersebar di area publik RW 011",
-      "Dukungan teknis yang responsif untuk warga",
-    ],
-    portalUrl: "#",
-    foto: "/assets/img/program/wifi-warga.jpg",
-  },
-  {
-    nama: "Koperasi",
+    nama: "Koperasi Puri Karya",
     slug: "koperasi",
     icon: "fas fa-store",
     deskripsi:
@@ -620,23 +605,8 @@ export const programInovasi: ProgramInovasi[] = [
       "Program pemberdayaan UMKM warga",
       "Bagi hasil keuntungan untuk anggota",
     ],
-    portalUrl: "#",
+    portalUrl: "https://koperasipurikarya.id",
     foto: "/assets/img/program/koperasi.jpg",
-  },
-  {
-    nama: "Sidigi RT",
-    slug: "sidigi-rt",
-    icon: "fas fa-laptop-code",
-    deskripsi:
-      "Sistem Digitalisasi RT — platform digital untuk mempermudah administrasi dan pelayanan di tingkat RT. Warga bisa mengurus surat, lapor kegiatan, dan akses informasi RT secara online.",
-    fitur: [
-      "Pengajuan surat pengantar online",
-      "Data warga digital per RT",
-      "Laporan kegiatan & keuangan RT",
-      "Notifikasi informasi penting via WhatsApp",
-    ],
-    portalUrl: "#",
-    foto: "/assets/img/program/sidigi-rt.jpg",
   },
 ];
 
@@ -672,10 +642,9 @@ export const navMenu: NavItem[] = [
     label: "Layanan",
     href: "#",
     children: [
-      { label: "Program & Inovasi", href: "/program" },
+      { label: "Koperasi Puri Karya", href: "https://koperasipurikarya.id" },
       { label: "Dokumen Publik", href: "/dokumen" },
-      { label: "Infaq Online", href: "/infaq" },
-      { label: "Transparansi Infaq", href: "/transparansi-infaq" },
+      { label: "Transparansi Keuangan", href: "/transparansi-keuangan" },
       { label: "Saran & Masukan", href: "/saran" },
     ],
   },
@@ -709,10 +678,10 @@ export const layananCepat = [
     link: "/dokumen",
   },
   {
-    icon: "fas fa-hand-holding-heart",
-    title: "Infaq Online",
-    description: "Salurkan infaq secara mudah dan transparan",
-    link: "/infaq",
+    icon: "fas fa-store",
+    title: "Koperasi Puri Karya",
+    description: "Koperasi warga untuk kebutuhan ekonomi bersama",
+    link: "https://koperasipurikarya.id",
   },
   {
     icon: "fas fa-comment-dots",

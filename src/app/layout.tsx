@@ -11,6 +11,7 @@ import type { Metadata } from "next";
 import { Chelsea_Market, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Preloader from "@/layout/Preloader";
+import QueryProvider from "@/providers/QueryProvider";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -37,8 +38,10 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body className={`${chelsea_market.variable} ${dmSans.variable}`}>
-        <Preloader />
-        {children}
+        <QueryProvider>
+          <Preloader />
+          {children}
+        </QueryProvider>
       </body>
     </html>
   );

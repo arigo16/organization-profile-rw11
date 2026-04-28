@@ -1,6 +1,30 @@
 import { layananCepat } from "@/data/rw011";
 import Link from "next/link";
 
+const ServiceLink = ({
+  href,
+  className,
+  children,
+}: {
+  href: string;
+  className?: string;
+  children: React.ReactNode;
+}) => {
+  const isExternal = href.startsWith("http");
+  if (isExternal) {
+    return (
+      <a href={href} className={className} target="_blank" rel="noopener noreferrer">
+        {children}
+      </a>
+    );
+  }
+  return (
+    <Link href={href} className={className}>
+      {children}
+    </Link>
+  );
+};
+
 export const Service1 = () => {
   return (
     <section className="service-section fix section-bg section-padding">
@@ -34,15 +58,15 @@ export const Service1 = () => {
                     />
                   </div>
                   <h3>
-                    <Link href={item.link}>{item.title}</Link>
+                    <ServiceLink href={item.link}>{item.title}</ServiceLink>
                   </h3>
                   <p>{item.description}</p>
-                  <Link
+                  <ServiceLink
                     href={item.link}
                     className="theme-btn transparent-btn-2 mt-3"
                   >
                     Selengkapnya <i className="fas fa-arrow-right" />
-                  </Link>
+                  </ServiceLink>
                 </div>
               </div>
             </div>

@@ -63,65 +63,49 @@ export const WilayahSection = () => {
             {/* Masterplan */}
             <Tab.Pane eventKey="masterplan" className="tab-pane fade">
               <div className="row justify-content-center">
-                <div className="col-lg-10 wow fadeInUp">
-                  <Image
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: "100%", height: "auto" }}
-                    src={wilayahInfo.masterplanImage}
-                    alt="Masterplan RW 011"
-                  />
-                  <p className="text-center mt-3 text-muted">
-                    Masterplan Wilayah RW 011 Desa Sukamantri
-                  </p>
+                <div className="col-lg-8 wow fadeInUp">
+                  <div
+                    className="text-center py-5"
+                    style={{
+                      background: "#f8f9fa",
+                      borderRadius: 12,
+                      border: "2px dashed #dee2e6",
+                    }}
+                  >
+                    <i
+                      className="fas fa-drafting-compass mb-3"
+                      style={{ fontSize: 48, color: "#adb5bd" }}
+                    />
+                    <h4 className="text-muted mb-2">Masterplan Belum Tersedia</h4>
+                    <p className="text-muted mb-0">
+                      Dokumen masterplan wilayah RW 011 sedang dalam proses penyusunan.
+                    </p>
+                  </div>
                 </div>
               </div>
             </Tab.Pane>
 
             {/* Batas Wilayah */}
             <Tab.Pane eventKey="batas" className="tab-pane fade">
-              <div className="row g-4">
-                <div className="col-lg-6 wow fadeInUp" data-wow-delay=".2s">
-                  <Image
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: "100%", height: "auto" }}
-                    src={wilayahInfo.petaLokasi}
-                    alt="Peta Lokasi RW 011"
-                  />
-                </div>
-                <div className="col-lg-6 wow fadeInUp" data-wow-delay=".4s">
-                  <h3 className="mb-4">Informasi Wilayah</h3>
-                  <table className="table table-bordered">
-                    <tbody>
-                      <tr>
-                        <th style={{ width: "40%" }}>Luas Wilayah</th>
-                        <td>{wilayahInfo.luasWilayah}</td>
-                      </tr>
-                      <tr>
-                        <th>Jumlah RT</th>
-                        <td>{wilayahInfo.jumlahRT} RT</td>
-                      </tr>
-                      <tr>
-                        <th>Batas Utara</th>
-                        <td>{wilayahInfo.batasUtara}</td>
-                      </tr>
-                      <tr>
-                        <th>Batas Selatan</th>
-                        <td>{wilayahInfo.batasSelatan}</td>
-                      </tr>
-                      <tr>
-                        <th>Batas Timur</th>
-                        <td>{wilayahInfo.batasTimur}</td>
-                      </tr>
-                      <tr>
-                        <th>Batas Barat</th>
-                        <td>{wilayahInfo.batasBarat}</td>
-                      </tr>
-                    </tbody>
-                  </table>
+              <div className="row justify-content-center">
+                <div className="col-lg-8 wow fadeInUp">
+                  <div
+                    className="text-center py-5"
+                    style={{
+                      background: "#f8f9fa",
+                      borderRadius: 12,
+                      border: "2px dashed #dee2e6",
+                    }}
+                  >
+                    <i
+                      className="fas fa-border-all mb-3"
+                      style={{ fontSize: 48, color: "#adb5bd" }}
+                    />
+                    <h4 className="text-muted mb-2">Peta Batas Wilayah Belum Tersedia</h4>
+                    <p className="text-muted mb-0">
+                      Peta batas wilayah RW 011 sedang dalam proses pemetaan.
+                    </p>
+                  </div>
                 </div>
               </div>
             </Tab.Pane>
@@ -129,18 +113,24 @@ export const WilayahSection = () => {
             {/* Foto Udara */}
             <Tab.Pane eventKey="udara" className="tab-pane fade">
               <div className="row justify-content-center">
-                <div className="col-lg-10 wow fadeInUp">
-                  <Image
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: "100%", height: "auto" }}
-                    src={wilayahInfo.aerialPhoto}
-                    alt="Foto Udara RW 011"
-                  />
-                  <p className="text-center mt-3 text-muted">
-                    Foto udara kawasan RW 011 Desa Sukamantri
-                  </p>
+                <div className="col-lg-8 wow fadeInUp">
+                  <div
+                    className="text-center py-5"
+                    style={{
+                      background: "#f8f9fa",
+                      borderRadius: 12,
+                      border: "2px dashed #dee2e6",
+                    }}
+                  >
+                    <i
+                      className="fas fa-helicopter mb-3"
+                      style={{ fontSize: 48, color: "#adb5bd" }}
+                    />
+                    <h4 className="text-muted mb-2">Foto Udara Belum Tersedia</h4>
+                    <p className="text-muted mb-0">
+                      Foto udara kawasan RW 011 sedang dalam proses pengambilan.
+                    </p>
+                  </div>
                 </div>
               </div>
             </Tab.Pane>
